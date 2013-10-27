@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discotron9000", "Discotron9000\Discotron9000.csproj", "{45ED926F-265C-4C4B-A779-78CDCBB65E03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discotron9000.NutsAndBolts", "Discotron9000.NutsAndBolts\Discotron9000.NutsAndBolts.csproj", "{C5625DDB-D522-4BA0-ACF1-A72F3D146A4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discotron9000.Midi", "Discotron9000.Midi\Discotron9000.Midi.csproj", "{F0CB26C2-2BA5-4818-A709-E38A8C02AFE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{B7F41284-582B-451B-8BB0-86C87326081A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Midi", "Libraries\midi-dot-net\Midi\Midi.csproj", "{F60D8B7B-2D2E-4B94-A736-3783FFE1A25C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MidiDotNet", "MidiDotNet", "{2EDEDBE4-A941-4951-9C21-8C3A809FCF53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidiUnitTests", "Libraries\midi-dot-net\MidiUnitTests\MidiUnitTests.csproj", "{EFE2A922-4927-4D76-ADC6-983D44B2FD4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45ED926F-265C-4C4B-A779-78CDCBB65E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45ED926F-265C-4C4B-A779-78CDCBB65E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45ED926F-265C-4C4B-A779-78CDCBB65E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45ED926F-265C-4C4B-A779-78CDCBB65E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5625DDB-D522-4BA0-ACF1-A72F3D146A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5625DDB-D522-4BA0-ACF1-A72F3D146A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5625DDB-D522-4BA0-ACF1-A72F3D146A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5625DDB-D522-4BA0-ACF1-A72F3D146A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0CB26C2-2BA5-4818-A709-E38A8C02AFE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0CB26C2-2BA5-4818-A709-E38A8C02AFE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0CB26C2-2BA5-4818-A709-E38A8C02AFE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0CB26C2-2BA5-4818-A709-E38A8C02AFE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60D8B7B-2D2E-4B94-A736-3783FFE1A25C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60D8B7B-2D2E-4B94-A736-3783FFE1A25C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60D8B7B-2D2E-4B94-A736-3783FFE1A25C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60D8B7B-2D2E-4B94-A736-3783FFE1A25C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EDEDBE4-A941-4951-9C21-8C3A809FCF53} = {B7F41284-582B-451B-8BB0-86C87326081A}
+		{F60D8B7B-2D2E-4B94-A736-3783FFE1A25C} = {2EDEDBE4-A941-4951-9C21-8C3A809FCF53}
+		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E} = {2EDEDBE4-A941-4951-9C21-8C3A809FCF53}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal
