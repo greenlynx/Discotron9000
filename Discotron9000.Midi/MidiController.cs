@@ -150,9 +150,9 @@ namespace Discotron9000.Midi
             }
 
             var square = GetSquareForNote(msg);
-            var lightness = ClampMidiValue(msg.Velocity, 1);
+            var value = ClampMidiValue(msg.Velocity, 1);
 
-            square.TurnOnWithLightness(lightness);
+            square.TurnOnWithValue(value);
         }
 
         private void _inputDevice_NoteOff(NoteOffMessage msg)

@@ -97,13 +97,13 @@ namespace Discotron9000.NutsAndBolts
             }
         }
 
-        public void TurnOnWithLightness(double lightness)
+        public void TurnOnWithValue(double value)
         {
             try
             {
                 BeginUpdatingMultipleProperties();
 
-                BaseIntensities = BaseIntensities.WithValue(lightness);
+                BaseIntensities = BaseIntensities.WithValue(value);
                 IsLit = true;
             }
             finally
