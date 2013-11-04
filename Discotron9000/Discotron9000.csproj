@@ -105,6 +105,10 @@
       <Project>{c5625ddb-d522-4ba0-acf1-a72f3d146a4c}</Project>
       <Name>Discotron9000.NutsAndBolts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Discotron9000.Output.Serial\Discotron9000.Output.Serial.csproj">
+      <Project>{112e3a3d-e8ea-4149-bf8f-cf599debcbcf}</Project>
+      <Name>Discotron9000.Output.Serial</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

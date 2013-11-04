@@ -112,7 +112,7 @@ namespace Discotron9000.NutsAndBolts
             }
         }
 
-        public event EventHandler IntensitiesChanged;
+        public event EventHandler<IntensitiesChangedEventArgs> IntensitiesChanged;
 
         private void FireIntensitiesChanged()
         {

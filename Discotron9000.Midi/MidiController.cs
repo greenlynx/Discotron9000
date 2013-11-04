@@ -104,7 +104,13 @@ namespace Discotron9000.Midi
 
         private DiscoSquare GetSquareForNote(NoteMessage msg)
         {
-            return DiscoFloor.GetSquare(msg.Pitch.PositionInOctave(), msg.Pitch.Octave() - 2);
+            int index = (msg.Pitch.Octave()) * 12 + msg.Pitch.PositionInOctave();
+            //index = ClampValue(index, 24);
+
+            int x = index % 5;
+            int y = (index / 5) % 5;
+
+            return DiscoFloor.GetSquare(x, y);
         }
 
         private static int ClampValue(int value, int maximum, int minimum = 0)

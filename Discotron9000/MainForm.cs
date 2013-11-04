@@ -17,6 +17,7 @@
 
 using Discotron9000.Midi;
 using Discotron9000.NutsAndBolts;
+using Discotron9000.Output.Serial;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,7 @@ namespace Discotron9000
         private DiscoFloor _discoFloor;
         private KeyEventController _keyEventController;
         private MidiController _midiController;
+        private ArduinoOutput _arduinoOutput;
 
         public MainForm()
         {
@@ -45,6 +47,9 @@ namespace Discotron9000
             _discoFloor = new DiscoFloor(5, 5);
 
             _midiController = new MidiController(_discoFloor);
+
+            _arduinoOutput = new ArduinoOutput(_discoFloor);
+            _arduinoOutput.IsOpenChanged += _arduinoOutput_IsOpenChanged;
 
             _midiDeviceComboBox.Items.Clear();
             if (_midiController.Devices.Any())
@@ -63,14 +68,27 @@ namespace Discotron9000
                 _midiChannelComboBox.Items.Add(String.Format("Channel {0}", i + 1));
             }
 
+            _serialPortComboBox.Items.Clear();
+            for (int i = 1; i <= 9; i++)
+            {
+                _serialPortComboBox.Items.Add(String.Format("COM{0}", i));
+            }
+
             _midiDeviceComboBox.SelectedIndex = 0;
             _midiChannelComboBox.SelectedIndex = 0;
+            _serialPortComboBox.SelectedIndex = 2;
 
             _keyEventController = new KeyEventController();
             _keyEventController.Form = this;
             _keyEventController.DiscoFloor = _discoFloor;
 
             _danceFloorView.DiscoFloor = _discoFloor;
+        }
+
+        private void _arduinoOutput_IsOpenChanged(object sender, IsOpenChangedEventArgs e)
+        {
+            var status = (e.IsOpen ? "CONNECTED" : "NOT CONNECTED");
+            _serialPortStatusLabel.Text = String.Format("Serial status: {0}", status);
         }
 
         private void _randomiseButton_Click(object sender, EventArgs e)
@@ -117,6 +135,21 @@ namespace Discotron9000
         private void _alwaysOnTopCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             TopMost = _alwaysOnTopCheckBox.Checked;
+        }
+
+        private void _serialPortComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _arduinoOutput.SerialPortName = _serialPortComboBox.SelectedItem as string;
+        }
+        
+        private void _closeSerialButton_Click(object sender, EventArgs e)
+        {
+            _arduinoOutput.ClosePort();
+        }
+
+        private void openSerialButton_Click(object sender, EventArgs e)
+        {
+            _arduinoOutput.OpenPort();
         }
     }
 }

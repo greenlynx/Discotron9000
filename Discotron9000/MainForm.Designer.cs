@@ -32,13 +32,19 @@
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this._midiDeviceComboBox = new System.Windows.Forms.ComboBox();
             this._midiChannelComboBox = new System.Windows.Forms.ComboBox();
-            this._alwaysOnTopCheckBox = new System.Windows.Forms.CheckBox();
             this._randomiseButton = new System.Windows.Forms.Button();
             this._allOnButton = new System.Windows.Forms.Button();
             this._allOffButton = new System.Windows.Forms.Button();
+            this._alwaysOnTopCheckBox = new System.Windows.Forms.CheckBox();
+            this._serialPortComboBox = new System.Windows.Forms.ComboBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this._serialPortStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this._closeSerialButton = new System.Windows.Forms.Button();
+            this.openSerialButton = new System.Windows.Forms.Button();
             this._danceFloorView = new Discotron9000.Controls.DancefloorView();
             this._tableLayoutPanel.SuspendLayout();
             this.flowLayoutPanel.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // _tableLayoutPanel
@@ -66,10 +72,13 @@
             this.flowLayoutPanel.Controls.Add(this._allOnButton);
             this.flowLayoutPanel.Controls.Add(this._allOffButton);
             this.flowLayoutPanel.Controls.Add(this._alwaysOnTopCheckBox);
+            this.flowLayoutPanel.Controls.Add(this._serialPortComboBox);
+            this.flowLayoutPanel.Controls.Add(this._closeSerialButton);
+            this.flowLayoutPanel.Controls.Add(this.openSerialButton);
             this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(553, 54);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(553, 58);
             this.flowLayoutPanel.TabIndex = 2;
             // 
             // _midiDeviceComboBox
@@ -92,17 +101,6 @@
             this._midiChannelComboBox.Size = new System.Drawing.Size(121, 21);
             this._midiChannelComboBox.TabIndex = 1;
             this._midiChannelComboBox.SelectedIndexChanged += new System.EventHandler(this._midiChannelComboBox_SelectedIndexChanged);
-            // 
-            // _alwaysOnTopCheckBox
-            // 
-            this._alwaysOnTopCheckBox.AutoSize = true;
-            this._alwaysOnTopCheckBox.Location = new System.Drawing.Point(3, 32);
-            this._alwaysOnTopCheckBox.Name = "_alwaysOnTopCheckBox";
-            this._alwaysOnTopCheckBox.Size = new System.Drawing.Size(100, 19);
-            this._alwaysOnTopCheckBox.TabIndex = 2;
-            this._alwaysOnTopCheckBox.Text = "Always on top";
-            this._alwaysOnTopCheckBox.UseVisualStyleBackColor = true;
-            this._alwaysOnTopCheckBox.CheckedChanged += new System.EventHandler(this._alwaysOnTopCheckBox_CheckedChanged);
             // 
             // _randomiseButton
             // 
@@ -134,13 +132,69 @@
             this._allOffButton.UseVisualStyleBackColor = true;
             this._allOffButton.Click += new System.EventHandler(this._allOffButton_Click);
             // 
+            // _alwaysOnTopCheckBox
+            // 
+            this._alwaysOnTopCheckBox.AutoSize = true;
+            this._alwaysOnTopCheckBox.Location = new System.Drawing.Point(3, 32);
+            this._alwaysOnTopCheckBox.Name = "_alwaysOnTopCheckBox";
+            this._alwaysOnTopCheckBox.Size = new System.Drawing.Size(100, 19);
+            this._alwaysOnTopCheckBox.TabIndex = 2;
+            this._alwaysOnTopCheckBox.Text = "Always on top";
+            this._alwaysOnTopCheckBox.UseVisualStyleBackColor = true;
+            this._alwaysOnTopCheckBox.CheckedChanged += new System.EventHandler(this._alwaysOnTopCheckBox_CheckedChanged);
+            // 
+            // _serialPortComboBox
+            // 
+            this._serialPortComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._serialPortComboBox.FormattingEnabled = true;
+            this._serialPortComboBox.Location = new System.Drawing.Point(109, 32);
+            this._serialPortComboBox.Name = "_serialPortComboBox";
+            this._serialPortComboBox.Size = new System.Drawing.Size(121, 21);
+            this._serialPortComboBox.TabIndex = 5;
+            this._serialPortComboBox.SelectedIndexChanged += new System.EventHandler(this._serialPortComboBox_SelectedIndexChanged);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._serialPortStatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 511);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(559, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "_statusStrip";
+            // 
+            // _serialPortStatusLabel
+            // 
+            this._serialPortStatusLabel.Name = "_serialPortStatusLabel";
+            this._serialPortStatusLabel.Size = new System.Drawing.Size(0, 17);
+            // 
+            // _closeSerialButton
+            // 
+            this._closeSerialButton.Location = new System.Drawing.Point(236, 32);
+            this._closeSerialButton.Name = "_closeSerialButton";
+            this._closeSerialButton.Size = new System.Drawing.Size(92, 23);
+            this._closeSerialButton.TabIndex = 6;
+            this._closeSerialButton.Text = "Close serial";
+            this._closeSerialButton.UseVisualStyleBackColor = true;
+            this._closeSerialButton.Click += new System.EventHandler(this._closeSerialButton_Click);
+            // 
+            // openSerialButton
+            // 
+            this.openSerialButton.Location = new System.Drawing.Point(334, 32);
+            this.openSerialButton.Name = "openSerialButton";
+            this.openSerialButton.Size = new System.Drawing.Size(92, 23);
+            this.openSerialButton.TabIndex = 6;
+            this.openSerialButton.Text = "Open serial";
+            this.openSerialButton.UseVisualStyleBackColor = true;
+            this.openSerialButton.Click += new System.EventHandler(this.openSerialButton_Click);
+            // 
             // _danceFloorView
             // 
             this._danceFloorView.DiscoFloor = null;
             this._danceFloorView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._danceFloorView.Location = new System.Drawing.Point(3, 63);
+            this._danceFloorView.Location = new System.Drawing.Point(3, 67);
             this._danceFloorView.Name = "_danceFloorView";
-            this._danceFloorView.Size = new System.Drawing.Size(553, 467);
+            this._danceFloorView.Size = new System.Drawing.Size(553, 463);
             this._danceFloorView.TabIndex = 1;
             // 
             // MainForm
@@ -148,6 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 533);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this._tableLayoutPanel);
             this.KeyPreview = true;
             this.Name = "MainForm";
@@ -158,7 +213,10 @@
             this._tableLayoutPanel.PerformLayout();
             this.flowLayoutPanel.ResumeLayout(false);
             this.flowLayoutPanel.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -173,6 +231,11 @@
         private System.Windows.Forms.Button _randomiseButton;
         private System.Windows.Forms.Button _allOnButton;
         private System.Windows.Forms.Button _allOffButton;
+        private System.Windows.Forms.ComboBox _serialPortComboBox;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel _serialPortStatusLabel;
+        private System.Windows.Forms.Button _closeSerialButton;
+        private System.Windows.Forms.Button openSerialButton;
 
 
     }

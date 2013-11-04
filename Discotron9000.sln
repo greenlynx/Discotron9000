@@ -15,6 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MidiDotNet", "MidiDotNet", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidiUnitTests", "Libraries\midi-dot-net\MidiUnitTests\MidiUnitTests.csproj", "{EFE2A922-4927-4D76-ADC6-983D44B2FD4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discotron9000.Output.Serial", "Discotron9000.Output.Serial\Discotron9000.Output.Serial.csproj", "{112E3A3D-E8EA-4149-BF8F-CF599DEBCBCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CmdMessenger", "CmdMessenger", "{24FB8EC8-9A17-4585-A079-B2C3FB620F16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandMessenger", "..\..\Visual Studio 2012\Projects\Discotron9000\Libraries\CmdMessenger\CSharp\CommandMessenger\CommandMessenger.csproj", "{3CF8F8FC-6F5C-46F8-94DC-C2E4C505ECA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,14 +47,24 @@ Global
 		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{112E3A3D-E8EA-4149-BF8F-CF599DEBCBCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{112E3A3D-E8EA-4149-BF8F-CF599DEBCBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{112E3A3D-E8EA-4149-BF8F-CF599DEBCBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{112E3A3D-E8EA-4149-BF8F-CF599DEBCBCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF8F8FC-6F5C-46F8-94DC-C2E4C505ECA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF8F8FC-6F5C-46F8-94DC-C2E4C505ECA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF8F8FC-6F5C-46F8-94DC-C2E4C505ECA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF8F8FC-6F5C-46F8-94DC-C2E4C505ECA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2EDEDBE4-A941-4951-9C21-8C3A809FCF53} = {B7F41284-582B-451B-8BB0-86C87326081A}
+		{24FB8EC8-9A17-4585-A079-B2C3FB620F16} = {B7F41284-582B-451B-8BB0-86C87326081A}
 		{F60D8B7B-2D2E-4B94-A736-3783FFE1A25C} = {2EDEDBE4-A941-4951-9C21-8C3A809FCF53}
 		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E} = {2EDEDBE4-A941-4951-9C21-8C3A809FCF53}
+		{3CF8F8FC-6F5C-46F8-94DC-C2E4C505ECA4} = {24FB8EC8-9A17-4585-A079-B2C3FB620F16}
 	EndGlobalSection
 	GlobalSection(Performance) = preSolution
 		HasPerformanceSessions = true
