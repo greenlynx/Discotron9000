@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discotron9000.Output.Serial
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CmdMessenger", "CmdMessenger", "{24FB8EC8-9A17-4585-A079-B2C3FB620F16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandMessenger", "..\..\Visual Studio 2012\Projects\Discotron9000\Libraries\CmdMessenger\CSharp\CommandMessenger\CommandMessenger.csproj", "{3CF8F8FC-6F5C-46F8-94DC-C2E4C505ECA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandMessenger", "Libraries\CmdMessenger\CSharp\CommandMessenger\CommandMessenger.csproj", "{3CF8F8FC-6F5C-46F8-94DC-C2E4C505ECA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,8 +65,5 @@ Global
 		{F60D8B7B-2D2E-4B94-A736-3783FFE1A25C} = {2EDEDBE4-A941-4951-9C21-8C3A809FCF53}
 		{EFE2A922-4927-4D76-ADC6-983D44B2FD4E} = {2EDEDBE4-A941-4951-9C21-8C3A809FCF53}
 		{3CF8F8FC-6F5C-46F8-94DC-C2E4C505ECA4} = {24FB8EC8-9A17-4585-A079-B2C3FB620F16}
-	EndGlobalSection
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

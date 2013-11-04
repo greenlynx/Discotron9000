@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Visual Studio 2012\Projects\Discotron9000\Libraries\CmdMessenger\CSharp\CommandMessenger\CommandMessenger.csproj">
+    <ProjectReference Include="..\Libraries\CmdMessenger\CSharp\CommandMessenger\CommandMessenger.csproj">
       <Project>{3cf8f8fc-6f5c-46f8-94dc-c2e4c505eca4}</Project>
       <Name>CommandMessenger</Name>
     </ProjectReference>
