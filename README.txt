@@ -1,6 +1,6 @@
 Software for controlling the bike-powered disco floor. Better instructions coming soon...
 
-Square are laid out in 5 rows of 5, and numbered internally from 0 to 24.
+Squares are laid out in 5 rows of 5, and numbered internally from 0 to 24.
 
 0 is top-left, 4 is top-right, 24 is bottom-right etc.
 
@@ -22,6 +22,5 @@ CC59:         controls the shade of square 24
 Turning squares on and off (note on/off messages)
 -------------------------------------------------
 
-C, C#, D, D#, E - selects the column
-Octave (3 - 7)  - selects the row
+Note/octave     - selects the square
 Velocity        - sets the brightness of the square
